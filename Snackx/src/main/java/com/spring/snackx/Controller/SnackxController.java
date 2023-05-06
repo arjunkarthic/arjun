@@ -9,11 +9,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import org.springframework.web.bind.annotation.RestController;
 
 import com.spring.snackx.Service.SnackxService;
 import com.spring.snackx.model.Snackx;
+
+import io.swagger.v3.oas.annotations.tags.Tag;
 
 
 
@@ -29,7 +30,7 @@ public class SnackxController {
 
 		private SnackxService service;
 
-		
+		@Tag(name = "Login Method",description = "User Validation")
 
 		  @PostMapping("/login")
 

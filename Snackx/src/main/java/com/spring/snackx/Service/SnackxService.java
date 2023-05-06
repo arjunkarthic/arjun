@@ -56,7 +56,7 @@ public class SnackxService {
 
 		
 		public List<Snackx> paginationAndSorting(int pageNumber, int pageSize, String column_name){
-			Page<Snackx> i = repository.findAll(PageRequest.of(pageNumber, pageSize, Sort.by(column_name).ascending()));
+			Page<Snackx> i = repository.findAll(PageRequest.of(pageNumber, pageSize, Sort.by(column_name).descending()));
 			return i.getContent();
 		}
 		public List<Snackx> sortDescending(String field){	
@@ -72,7 +72,7 @@ public class SnackxService {
 		}
 		
 		public List<Snackx> paginationAndSortingList(int pageNumber, int pageSize, String column_name){
-			Page<Snackx> i = repository.findAll(PageRequest.of(pageNumber, pageSize, Sort.by(column_name).ascending()));
+			Page<Snackx> i = repository.findAll(PageRequest.of(pageNumber, pageSize, Sort.by(column_name).descending()));
 			return i.getContent();
 		}
 		
